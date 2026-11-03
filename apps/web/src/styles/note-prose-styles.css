@@ -163,20 +163,20 @@
 
 .edgeever-editor[data-note-heading-style="numbered"] .ProseMirror h2::after,
 .edgeever-editor[data-note-heading-style="numbered"] .markdown-content h2::after {
-  content: "SECTION " counter(note-prose-h2, decimal-leading-zero) " · 章节核心脉络";
+  content: "SECTION " counter(note-prose-h2, decimal-leading-zero);
   display: block;
   margin-top: 3px;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 600;
   color: #9ca3af;
-  letter-spacing: 0.4px;
+  letter-spacing: 1px;
   line-height: 1.3;
   pointer-events: none;
 }
 
 .edgeever-editor[data-note-heading-style="numbered"] .ProseMirror h2:last-of-type::after,
 .edgeever-editor[data-note-heading-style="numbered"] .markdown-content h2:last-of-type::after {
-  content: "SUMMARY · 核心总结与延伸";
+  content: "SUMMARY";
 }
 
 /* H3: Green pill badge with solid dot */
@@ -220,45 +220,6 @@
   color: #111827;
   font-size: 14px;
   font-weight: 800;
-}
-
-/* Inline code in numbered magazine mode: neutral cool gray so green strong text stands out */
-.edgeever-editor[data-note-heading-style="numbered"] .ProseMirror :not(pre) > code,
-.edgeever-editor[data-note-heading-style="numbered"] .markdown-content :not(pre) > code {
-  background: #f3f4f6 !important;
-  color: #1f2937 !important;
-  box-shadow: none !important;
-  font-weight: 600;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-:root.dark .edgeever-editor[data-note-heading-style="numbered"] .ProseMirror :not(pre) > code,
-:root.dark .edgeever-editor[data-note-heading-style="numbered"] .markdown-content :not(pre) > code {
-  background: rgba(255, 255, 255, 0.08) !important;
-  color: #e5e7eb !important;
-}
-
-/* Image card frame in numbered magazine mode */
-.edgeever-editor[data-note-heading-style="numbered"] .ProseMirror img:not(.ProseMirror-separator),
-.edgeever-editor[data-note-heading-style="numbered"] .markdown-content img {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 6px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
-}
-
-/* 3. Heading style: Bottom rule ("underline") */
-.edgeever-editor[data-note-heading-style="underline"] .ProseMirror h2,
-.edgeever-editor[data-note-heading-style="underline"] .markdown-content h2 {
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--note-palette-divider, #e5e7eb);
-}
-
-:root.dark .edgeever-editor[data-note-heading-style="underline"] .ProseMirror h2,
-:root.dark .edgeever-editor[data-note-heading-style="underline"] .markdown-content h2 {
-  border-bottom-color: color-mix(in srgb, var(--note-palette-accent, #94a3b8) 32%, transparent);
 }
 
 /* 4. Quote style: Dashed card ("dashed" — Moyu Green quote card & code block accent bar) */

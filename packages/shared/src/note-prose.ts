@@ -25,7 +25,6 @@ export const NOTE_PROSE_HEADING_STYLES = [
   "default",
   "bar",
   "numbered",
-  "underline",
 ] as const;
 export type NoteProseHeadingStyle = (typeof NOTE_PROSE_HEADING_STYLES)[number];
 export const DEFAULT_NOTE_PROSE_HEADING_STYLE: NoteProseHeadingStyle = "default";
@@ -50,6 +49,7 @@ export type NoteProseStylePreferences = {
   headingStyle: NoteProseHeadingStyle;
   quoteStyle: NoteProseQuoteStyle;
   emphasisStyle: NoteProseEmphasisStyle;
+  showMagazineCover: boolean;
 };
 
 export const MAX_NOTE_PROSE_CSS_BYTES = 8 * 1024;
